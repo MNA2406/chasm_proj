@@ -13,7 +13,7 @@ WORKDIR chasm_proj
 
 #RUN gcc -o chasm chasm.c
 RUN gcc -o chasm chasm.c -fomit-frame-pointer -O3 -lJudy
-
+RUN cp chasm /usr/bin
 RUN mkdir out
 
-RUN ./chasm -l 30 -k 0 out/chasm < dictionary.txt
+RUN chasm -l 30 -k 0 out/chasm < dictionary.txt
